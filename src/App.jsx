@@ -1,33 +1,16 @@
 import { baseDatos } from "./base_datos"
+import "./App.css"
+import Login from "./login"
+import Activos from "./activos"
 
 export default function App() {
     return (
-      <table className="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">nombre del activo</th>
-      <th scope="col">ubicacion</th>
-      <th scope="col">estado</th>
-    </tr>
-  </thead>
+      <div>
+      <div>
+        <Login/>
+      </div>
+      </div>
+  
 
-  <tbody>
-    {
-      baseDatos.map(activos => (
-        <tr key={activos.id}> 
-        <td>{activos.id}</td>
-        <td>{activos.nombreActivo}</td>
-        <td>{activos.ubicacion} </td>
-        <td>{activos.estado}</td>
-      </tr>
-      )
-      )
-    }
-
-      
-
-  </tbody>
-</table>
     )
 }
