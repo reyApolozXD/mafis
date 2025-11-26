@@ -1,8 +1,23 @@
 import React from "react";
+import { baseDatos } from "./base_datos";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Activos(){
+    const { logout } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate("/login");
+    };
 
     return(
+    <div>
+        <div style={{padding: '10px', textAlign: 'right'}}>
+            <button onClick={handleLogout} style={{padding: '8px 16px', cursor: 'pointer'}}>Cerrar Sesión</button>
+        </div>
     <table className="table">
             <thead>
             <tr>
@@ -27,8 +42,6 @@ export default function Activos(){
 
             </tbody>
   </table>
-
-
-
-    )
+        </div>
+        )
 }

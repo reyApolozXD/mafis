@@ -1,7 +1,29 @@
 import React from "react";
-import Activos from "./activos";
+import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "./AuthContext";
 
 export default function Login(){
+    const [correo, setCorreo] = useState("");
+    const [contraseña, setContraseña] = useState("");
+    const [error, setError] = useState("");
+    const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        if (!correo || !contraseña) {
+            setError("Por favor completa todos los campos");
+            return;
+        }
+        const loginExitoso = login(correo, contraseña);
+        if (loginExitoso) {
+            setError("");
+            navigate("/activos");
+        } else {
+            setError("Error en el inicio de sesión");
+        }
+    };
 
     return(
         <div className="cuerpo">
@@ -23,13 +45,20 @@ export default function Login(){
                 </div>
                 <div className="login">
                 <div className="login-usuario">
-                    <label for="usuario" className="label-usuario">Correo Electronico</label>
-                    <input type="text" id="usuario" className="input-usuario" placeholder="Correo electronico"/>
-                    <label for="contraseña" className="label-contraseña">Contraseña</label>
-                    <input type="password" id="contraseña" className="input-contraseña" placeholder="Contraseña"/>
+                    <label htmlFor="usuario" className="label-usuario">Correo Electronico</label>
+                    <input type="email" id="usuario" className="input-usuario" placeholder="Correo electronico"
+                        value={correo}
+                        onChange={(e) => setCorreo(e.target.value)}
+                    />
+                    <label htmlFor="contraseña" className="label-contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" className="input-contraseña" placeholder="Contraseña"
+                        value={contraseña}
+                        onChange={(e) => setContraseña(e.target.value)}
+                    />
+                    {error && <p style={{color: 'red', marginTop: '10px'}}>{error}</p>}
                 </div>
                 <div className="boton-inicio-sesion">
-                    <button className="boton-inicio">Iniciar Sesion</button>
+                    <button className="boton-inicio" onClick={handleLogin}>Iniciar Sesion</button>
                     <div className="links">
                         <a href="#" className="link-olvido-contraseña">Crear cuenta</a>
                         <div className="separador">
