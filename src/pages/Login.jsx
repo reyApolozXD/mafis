@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../AuthContext";
+import "../estilos/login-renamed.css"
 
 export default function Login(){
     const [correo, setCorreo] = useState("");
@@ -19,53 +20,53 @@ export default function Login(){
         const loginExitoso = login(correo, contraseña);
         if (loginExitoso) {
             setError("");
-            navigate("/activos");
+            navigate("/dassboar");
         } else {
             setError("Error en el inicio de sesión");
         }
     };
 
     return(
-        <div className="cuerpo">
+        <div className="login-cuerpo">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
-            <section className="cuerpo-inicio">
-                <div className="parte-superior">
-                    <div className="logo"> 
-                        <p className="log">SENA</p>
-                        <h1 className="titulo">
+            <section className="login-cuerpo-inicio">
+                <div className="login-parte-superior">
+                    <div className="login-logo"> 
+                        <p className="login-log">SENA</p>
+                        <h1 className="login-titulo">
                             MAFIS
                         </h1>
                     </div>
-                    <div className="parrafo-inicio">
-                            <p className="parrafo">
+                    <div className="login-parrafo-inicio">
+                            <p className="login-parrafo">
                                 Sistema de gestion de mantenimiento de activos fijos servicio nacional de aprendizaje sena
                             </p>
-                            <h2 className="subtitulo">Inicio de Sesion</h2>
+                            <h2 className="login-subtitulo">Inicio de Sesion</h2>
                     </div>
                 </div>
-                <div className="login">
+                <div className="login-panel">
                 <div className="login-usuario">
-                    <label htmlFor="usuario" className="label-usuario">Correo Electronico</label>
-                    <input type="email" id="usuario" className="input-usuario" placeholder="Correo electronico"
+                    <label htmlFor="usuario" className="login-label-usuario">Correo Electronico</label>
+                    <input type="email" id="usuario" className="login-input-usuario" placeholder="Correo electronico"
                         value={correo}
                         onChange={(e) => setCorreo(e.target.value)}
                     />
-                    <label htmlFor="contraseña" className="label-contraseña">Contraseña</label>
-                    <input type="password" id="contraseña" className="input-contraseña" placeholder="Contraseña"
+                    <label htmlFor="contraseña" className="login-label-contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" className="login-input-contraseña" placeholder="Contraseña"
                         value={contraseña}
                         onChange={(e) => setContraseña(e.target.value)}
                     />
                     {error && <p style={{color: 'red', marginTop: '10px'}}>{error}</p>}
                 </div>
-                <div className="boton-inicio-sesion">
-                    <button className="boton-inicio" onClick={handleLogin}>Iniciar Sesion</button>
-                    <div className="links">
-                        <a href="#" className="link-olvido-contraseña">Crear cuenta</a>
-                        <div className="separador">
+                <div className="login-boton-inicio-sesion">
+                    <button className="login-boton-inicio" onClick={handleLogin}>Iniciar Sesion</button>
+                    <div className="login-links">
+                        <a href="#" className="login-link-olvido-contraseña">Crear cuenta</a>
+                        <div className="login-separador">
                             |
                         </div>
                         <p>
-                        <a href="#" className="link-crear-cuenta">Olvide mi contraseña</a>
+                        <a href="#" className="login-link-crear-cuenta">Olvide mi contraseña</a>
                         </p>
                         
                     </div>

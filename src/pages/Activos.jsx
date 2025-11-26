@@ -1,7 +1,7 @@
 import React from "react";
-import { baseDatos } from "./base_datos";
+import {baseDatos} from "../base_datos";
 import { useContext } from "react";
-import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function Activos(){
@@ -23,8 +23,10 @@ export default function Activos(){
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">nombre del activo</th>
+                <th scope="col">tipo</th>
                 <th scope="col">ubicacion</th>
                 <th scope="col">estado</th>
+                <th scope="col">accion</th>
             </tr>
             </thead>
             <tbody>
@@ -33,8 +35,10 @@ export default function Activos(){
                 <tr key={activos.id}> 
                 <td>{activos.id}</td>
                 <td>{activos.nombreActivo}</td>
+                <td>{activos.tipo}</td>
                 <td>{activos.ubicacion} </td>
                 <td>{activos.estado}</td>
+                <td>{activos.button}{activos.eliminar}</td>
                 </tr>
                 )
                 )

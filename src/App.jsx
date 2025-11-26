@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { useContext } from "react";
 import { AuthContext, AuthProvider } from "./AuthContext";
 import "./App.css"
-import Login from "./login"
-import Activos from "./activos"
+import Login from "./pages/Login"
+import Activos from "./pages/Activos";
+import Dassboar from "./pages/Dassboar";
 
 function AppContent() {
   const { isAuthenticated } = useContext(AuthContext);
@@ -13,6 +14,8 @@ function AppContent() {
       <Route path="/login" element={<Login />} />
       <Route path="/activos" element={isAuthenticated ? <Activos /> : <Navigate to="/login" />} />
       <Route path="/" element={isAuthenticated ? <Navigate to="/activos" /> : <Navigate to="/login" />} />
+      <Route path="/dassboar" element={isAuthenticated ? <Dassboar /> : <Navigate to="/login" />} />
+      <Route path="/" element={isAuthenticated ? <Navigate to="/dassboar" /> : <Navigate to="/login" />} />
     </Routes>
   );
 }
