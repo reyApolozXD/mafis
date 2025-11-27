@@ -1,22 +1,43 @@
 import React from 'react'
 import "../estilos/dassboar.css"
+import alarma from "../assets/alarma.png"
+import lupa from "../assets/lupa.png"
+import campana from "../assets/campana.png"
+import perfil from "../assets/horses-from-this-angle-are-weird-v0-4dav7z3btend1.jpg"
+import peligro from "../assets/peligro.png"
+import calendario from "../assets/calendario.png"
+import plus from "../assets/plus.png"
+import cavador from "../assets/cavador.png"
+import coche from "../assets/coche.png"
+import teleconferencia from "../assets/teleconferencia.png"
+import infraestructura from "../assets/infraestructura.png"
+import herramientas from "../assets/herramientas-manuales.png"
+import conexion from "../assets/conexion.png"
+import marca from "../assets/marca.png"
+import senaLogo from "../assets/Sena_Colombia_logo.svg.png"
+import analisis from "../assets/analisis-de-datos.png"
+import informeSeo from "../assets/informe-seo.png"
+import carpeta from "../assets/carpeta.png"
+import hoja from "../assets/hoja-de-papel.png"
+import llave from "../assets/llave-inglesa.png"
+import usuarios from "../assets/silueta-de-multiples-usuarios.png"
+import engranaje from "../assets/engranaje.png"
 
 export default function Dassboar() {
   return (
-   <div>
-  <div classname="cuerpo-dassboar">
+   <div className='cuerpo'>
     <header className="encabezado-mafis">
       <div className="encabezado">
         <h2 className="tuitulo -encabezado">Gestion de mantenimientos de Activos </h2>
         <div className="nav-busqueda">
           <form action="/buscar" method="get" className="form-buscar">
             <input type="text" name="q" placeholder="Buscar activos, tareas, ubicaciones..." className="input-buscar" />
-            <button type="submit" className="boton-buscar"><img src="img/lupa.png" alt width="20px" /></button>
+            <button type="submit" className="boton-buscar"><img src={lupa} alt="buscar" width="20px" /></button>
           </form>
-          <img src="img/campana.png" alt width="20px" height="20px" />
+          <img src={campana} alt="campana" width="20px" height="20px" />
         </div>
         <div className="imagen-usuario">
-          <img className="imagen-usuario" src="img/horses-from-this-angle-are-weird-v0-4dav7z3btend1.jpg" alt width="50px" />
+          <img className="imagen-usuario" src={perfil} alt="perfil" width="50px" />
           <select name="opcione" id="opcione" className="opcione-encabezado">
             <option> 
             </option><optgroup>
@@ -53,16 +74,16 @@ export default function Dassboar() {
           <h2 className="datos-barra">85</h2>
           <article className="orders-list">
             <div className="Ordenes-trabajo">
-              <p className="Ordenes"><img src="img/peligro.png" width="20px" alt />Urgentes:</p> <strong>0</strong>
+              <p className="Ordenes"><img src={peligro} width="20px" alt="urgente" />Urgentes:</p> <strong>0</strong>
             </div>
             <div className="Ordenes-trabajo">
-              <p className="Ordenes"><img src="img/calendario.png" width="20px" alt />Programadas:</p> <strong>0</strong>
+              <p className="Ordenes"><img src={calendario} width="20px" alt="calendario" />Programadas:</p> <strong>0</strong>
             </div>
             <div className="Ordenes-trabajo">
-              <p className="Ordenes"><img src="img/alarma.png" width="20px" alt />Retrasadas:</p> <strong>0</strong>
+              <p className="Ordenes"><img src={alarma} width="20px" alt />Retrasadas:</p> <strong>0</strong>
             </div>
             <div className="Ordenes-trabajo">
-              <p className="Ordenes"><img src="img/plus.png" width="20px" alt />Abiertas Hoy:</p> <strong>0</strong>
+              <p className="Ordenes"><img src={plus} width="20px" alt="abiertas" />Abiertas Hoy:</p> <strong>0</strong>
             </div>
           </article>
           <button className="boton-contenido">Gestionar Órdenes</button>
@@ -142,27 +163,26 @@ export default function Dassboar() {
             </div>
           </div>    
         </div> 
-      </section></header></div>
   <div className="contenido">
     <h3 className="tuitulo-barra">Activos por categoria</h3>
     <article className="categorias">
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/cavador.png" width="20px" alt />Maquinaria pesada: <strong>400 (32%)</strong></p> 
+        <p className="categoria"><img src={cavador} width="20px" alt="maquinaria" />Maquinaria pesada: <strong>400 (32%)</strong></p> 
       </div>
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/coche.png" width="20px" alt />Vehiculos:<strong>300 (24%)</strong></p> 
+        <p className="categoria"><img src={coche} width="20px" alt="vehiculos" />Vehiculos:<strong>300 (24%)</strong></p> 
       </div>
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/teleconferencia.png" width="20px" alt />Equipos de oficina:<strong>200 (16%)</strong></p> 
+        <p className="categoria"><img src={teleconferencia} width="20px" alt="equipos" />Equipos de oficina:<strong>200 (16%)</strong></p> 
       </div>
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/infraestructura.png" width="20px" alt />Infraestructura:<strong>150 (12%)</strong></p> 
+        <p className="categoria"><img src={infraestructura} width="20px" alt="infraestructura" />Infraestructura:<strong>150 (12%)</strong></p> 
       </div>
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/herramientas-manuales.png" width="20px" alt />Herramientas:<strong>95 (8%)</strong></p> 
+        <p className="categoria"><img src={herramientas} width="20px" alt="herramientas" />Herramientas:<strong>95 (8%)</strong></p> 
       </div>
       <div className="categoria-activos">
-        <p className="categoria"><img src="img/conexion.png" width="20px" alt />Otros:<strong>100 (8%)</strong></p> 
+        <p className="categoria"><img src={conexion} width="20px" alt="otros" />Otros:<strong>100 (8%)</strong></p> 
       </div>
     </article>
     <button className="boton-contenido gestionar">Gestionar categorias</button>
@@ -171,31 +191,31 @@ export default function Dassboar() {
     <h3 className="tuitulo-barra">actividad reciente </h3>
     <article className="actividad-reciente">
       <div className="actividad">
-        <img src="img/conexion.png" width="20px" height="20px" alt />
+        <img src={conexion} width="20px" height="20px" alt="conexion" />
         <p>
           <strong>Orden #OT-2024-005 completada para 'Generador G-1'</strong><br />
           Hace 10 min por Juan Pérez</p>
       </div>
       <div className="actividad">
-        <img src="img/coche.png" width="20px" height="20px" alt />
+        <img src={coche} width="20px" height="20px" alt="coche" />
         <p>
           <strong>Nuevo activo 'motor V-12' añadido</strong><br />
           Ayer 14:30 por María López</p>
       </div>
       <div className="actividad">
-        <img src="img/conexion.png" width="20px" height="20px" alt />
+        <img src={conexion} width="20px" height="20px" alt="conexion" />
         <p>
           <strong>Alerta crítica: 'Compresor B-2' con nivel de aceite bajo</strong><br />
           Hace 3 horas por Sistema</p>
       </div>
       <div className="actividad">
-        <img src="img/infraestructura.png" width="20px" height="20px" alt />
+        <img src={infraestructura} width="20px" height="20px" alt="infraestructura" />
         <p>
           <strong>Mantenimiento preventivo programado para 'Línea de Producción 2'</strong><br />
           Hoy 09:00 por Pedro García</p>
       </div>
       <div className="actividad">
-        <img src="img/infraestructura.png" width="20px" height="20px" alt />
+        <img src={infraestructura} width="20px" height="20px" alt="infraestructura" />
         <p>
           <strong>Ubicación 'Almacén Principal' actualizada</strong><br />
           Hace 1 día por Ana Ruiz</p>
@@ -207,20 +227,22 @@ export default function Dassboar() {
     <h3 className="tuitulo-barra">Alertas criticas</h3>
     <article className="alertas-critica">
       <div className="alertas-criticas">
-        <p className="alertas"><img src="img/marca.png" width="20px" height="20px" alt />Nivel de aceite bajo en 'Compresor B-2'</p> 
+        <p className="alertas"><img src={marca} width="20px" height="20px" alt="marca" />Nivel de aceite bajo en 'Compresor B-2'</p> 
       </div>
       <div className="alertas-criticas">
-        <p className="alertas"><img src="img/marca.png" width="20px" height="20px" alt />Fallo de sensor en 'Linea de produccion 3'</p> 
+        <p className="alertas"><img src={marca} width="20px" height="20px" alt="marca" />Fallo de sensor en 'Linea de produccion 3'</p> 
       </div>
       <div className="alertas-criticas">
-        <p className="alertas"><img src="img/marca.png" width="20px" height="20px" alt />Activo 'Vehiculo V-5' con ITV caducada</p> 
+        <p className="alertas"><img src={marca} width="20px" height="20px" alt="marca" />Activo 'Vehiculo V-5' con ITV caducada</p> 
       </div>
     </article>
     <button className="boton-contenido">Resolver alertas</button>
   </div>
+  </section>
+  </header>
   <section className="panel-control">
     <div className="titulo-mafis">
-      <img src="img/Sena_Colombia_logo.svg.png" width="50px" height="50px" alt />
+      <img src={senaLogo} width="50px" height="50px" alt="sena" />
       <h1>MAFIS</h1>
     </div>
     <div className="boton-registros">
@@ -228,17 +250,17 @@ export default function Dassboar() {
     </div>
     <div className="opciones-dashboard">
       <nav className="navegacion-dashboard">
-        <button className="boton-paneles"><a href="#"><img src="./img/analisis-de-datos.png" alt width="30px" /></a>Dashboard</button>
-        <button className="boton-paneles"><a href="#"><img src="./img/informe-seo.png" alt width="30px" /></a>Reportes de falla</button>
-        <button className="boton-paneles"><a href="#"><img src="./img/carpeta.png" alt width="30px" /></a>Ordenes de trabajo</button>
-        <button className="boton-paneles"><a href="#"><img src="./img/hoja-de-papel.png" alt width="30px" /></a>Gestion de activos</button>
-        <button className="boton-paneles"><a href="#"><img src="./img/llave-inglesa.png" alt width="30px" /></a>Gestion de repuestos</button>
+        <button className="boton-paneles"><a href="#"><img src={analisis} alt="analisis" width="30px" /></a>Dashboard</button>
+        <button className="boton-paneles"><a href="#"><img src={informeSeo} alt="informe" width="30px" /></a>Reportes de falla</button>
+        <button className="boton-paneles"><a href="#"><img src={carpeta} alt="carpeta" width="30px" /></a>Ordenes de trabajo</button>
+        <button className="boton-paneles"><a href="#"><img src={hoja} alt="hoja" width="30px" /></a>Gestion de activos</button>
+        <button className="boton-paneles"><a href="#"><img src={llave} alt="llave" width="30px" /></a>Gestion de repuestos</button>
       </nav>
       <div>
         <h3 className="contactos">Contactos</h3>
         <nav className="administracion-configuracion">
-          <button className="boton-paneles"><a href="#"><img src="img/silueta-de-multiples-usuarios.png" alt width="30px" /></a>Administracion</button>
-          <button className="boton-paneles"><a href="#"><img src="./img/engranaje.png" alt width="30px" /></a>Configuracion</button>
+          <button className="boton-paneles"><a href="#"><img src={usuarios} alt="usuarios" width="30px" /></a>Administracion</button>
+          <button className="boton-paneles"><a href="#"><img src={engranaje} alt="engranaje" width="30px" /></a>Configuracion</button>
         </nav></div>
     </div>
   </section>
