@@ -3,8 +3,10 @@ import {baseDatos} from "../base_datos";
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Activos(){
+    const [datos, setDatos] = useState([])
     const { logout } = useContext(AuthContext);
     const navigate = useNavigate();
 
