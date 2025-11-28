@@ -34,7 +34,7 @@ estilos del encabezado
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:96%;
+    width:100%;
     background-color: white;
     padding: 1.5rem 2rem;
 }
