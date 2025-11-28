@@ -22,8 +22,18 @@ import hoja from "../assets/hoja-de-papel.png"
 import llave from "../assets/llave-inglesa.png"
 import usuarios from "../assets/silueta-de-multiples-usuarios.png"
 import engranaje from "../assets/engranaje.png"
+import { useNavigate } from 'react-router-dom';
 
 export default function Dassboar() {
+  const navigate = useNavigate();
+
+  const handleActivosClick = () => {
+    navigate("/activos");
+  }
+  const handleRetgreso = () => {
+        navigate("/login");
+    };
+
   return (
    <div className='cuerpo'>
     <header className="encabezado-mafis">
@@ -44,7 +54,7 @@ export default function Dassboar() {
               <option>1</option>
               <option>2</option>
               <option>3</option>
-              <option>4</option>
+              <option onClick={handleRetgreso}><button >Cerrar Sesión</button></option>
             </optgroup>
           </select>
         </div>
@@ -67,7 +77,7 @@ export default function Dassboar() {
               Pendientes de <br /> Revisión: <progress value={3} max={100} className="barra" /> <strong>55 (3%)</strong>
             </div>
           </article>
-          <button className="boton-contenido">Ver Todos los Activos</button>
+          <button className="boton-contenido" onClick={handleActivosClick}>Ver Todos los Activos</button>
         </div>
         <div className="contenido">
           <h3 className="tuitulo-barra">Órdenes de Trabajo</h3>
@@ -253,7 +263,7 @@ export default function Dassboar() {
         <button className="boton-paneles"><a href="#"><img src={analisis} alt="analisis" width="30px" /></a>Dashboard</button>
         <button className="boton-paneles"><a href="#"><img src={informeSeo} alt="informe" width="30px" /></a>Reportes de falla</button>
         <button className="boton-paneles"><a href="#"><img src={carpeta} alt="carpeta" width="30px" /></a>Ordenes de trabajo</button>
-        <button className="boton-paneles"><a href="#"><img src={hoja} alt="hoja" width="30px" /></a>Gestion de activos</button>
+        <button className="boton-paneles" onClick={handleActivosClick}><a href="#"><img src={hoja} alt="hoja" width="30px" /></a>Gestion de activos</button>
         <button className="boton-paneles"><a href="#"><img src={llave} alt="llave" width="30px" /></a>Gestion de repuestos</button>
       </nav>
       <div>

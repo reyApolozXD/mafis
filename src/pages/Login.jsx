@@ -20,7 +20,7 @@ export default function Login(){
         const loginExitoso = login(correo, contraseña);
         if (loginExitoso) {
             setError("");
-            navigate("/activos");
+            navigate("/dassboar");
         } else {
             setError("Error en el inicio de sesión");
         }

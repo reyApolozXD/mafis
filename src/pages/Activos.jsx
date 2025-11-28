@@ -1,24 +1,20 @@
 import React from "react";
 import {baseDatos} from "../base_datos";
-import { useContext } from "react";
-import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 export default function Activos(){
-    const [datos, setDatos] = useState([])
-    const { logout } = useContext(AuthContext);
+
+
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        logout();
-        navigate("/login");
+        navigate("/dassboar");
     };
 
     return(
     <div>
         <div style={{padding: '10px', textAlign: 'right'}}>
-            <button onClick={handleLogout} style={{padding: '8px 16px', cursor: 'pointer'}}>Cerrar Sesión</button>
+            <button className="boton-regreso" onClick={handleLogout}><a href="#"></a>Regresar </button>
         </div>
     <table className="table">
             <thead>
