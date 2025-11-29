@@ -49,8 +49,9 @@ export default function Dassboar() {
         <div className="imagen-usuario">
           <img className="imagen-usuario" src={perfil} alt="perfil" width="50px" />
           <select name="opcione" id="opcione" className="opcione-encabezado">
-            <option> 
-            </option><optgroup>
+            
+            <optgroup>
+              <option> opciones</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
