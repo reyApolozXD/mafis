@@ -12,8 +12,8 @@ function AppContent() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/activos" element={isAuthenticated ? <Activos /> : <Navigate to="/login" />} />
-      <Route path="/" element={isAuthenticated ? <Navigate to="/activos" /> : <Navigate to="/login" />} />
+      <Route path="/activos" element={<Activos /> } />
+      <Route path="/" element={<Navigate to="/activos" /> } />
       <Route path="/dassboar" element={isAuthenticated ? <Dassboar /> : <Navigate to="/login" />} />
       <Route path="/" element={isAuthenticated ? <Navigate to="/dassboar" /> : <Navigate to="/login" />} />
     </Routes>
