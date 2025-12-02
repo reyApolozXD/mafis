@@ -1,4 +1,5 @@
 import React from "react";
+import "../estilos/baseDatos.css";
 import { useEffect,useState } from "react";
 import {useNavigate } from "react-router-dom";
 export default function Activos(){
@@ -43,7 +44,7 @@ export default function Activos(){
                 <td>{activos.tipo}</td>
                 <td>{activos.ubicacion} </td>
                 <td>{activos.estado}</td>
-                <td>{activos.button}{activos.eliminar}</td>
+                <td><button className="editar">Editar</button><button className="eliminar">Eliminar</button></td>
                 </tr>
                 )
                 )

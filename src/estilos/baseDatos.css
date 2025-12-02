@@ -16,6 +16,7 @@
 .eliminar:hover {
     background-color: #ff4d4d;
     transform: translateY(-3px);
+    color: white;
     box-shadow: 0 4px 1px 0px rgba(0, 0, 0, 0.897);
 }
 
@@ -36,5 +37,6 @@
 .editar:hover {
     background-color: rgb(241, 147, 7);
     transform: translateY(-3px);
+    color: white;
     box-shadow: 0 4px 1px 0px rgba(0, 0, 0, 0.897);
 }
