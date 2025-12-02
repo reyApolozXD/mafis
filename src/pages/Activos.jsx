@@ -1,8 +1,6 @@
 import React from "react";
 import { useEffect,useState } from "react";
-import {baseDatos} from "../base_datos";
 import {useNavigate } from "react-router-dom";
-
 export default function Activos(){
     const [datos, setDatos] = useState([])
     const navigate = useNavigate();
