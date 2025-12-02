@@ -10,26 +10,20 @@ export default function CardCategorias() {
   return (
     <div className="contenido">
     <h3 className="tuitulo-barra">Activos por categoria</h3>
-    <article className="categorias">
-      <div className="categoria-activos">
+    <div className="categorias">
+      
         <p className="categoria"><img src={cavador} width="20px" alt="maquinaria" />Maquinaria pesada: <strong>400 (32%)</strong></p> 
-      </div>
-      <div className="categoria-activos">
+      
         <p className="categoria"><img src={coche} width="20px" alt="vehiculos" />Vehiculos:<strong>300 (24%)</strong></p> 
-      </div>
-      <div className="categoria-activos">
+      
         <p className="categoria"><img src={teleconferencia} width="20px" alt="equipos" />Equipos de oficina:<strong>200 (16%)</strong></p> 
-      </div>
-      <div className="categoria-activos">
+      
         <p className="categoria"><img src={infraestructura} width="20px" alt="infraestructura" />Infraestructura:<strong>150 (12%)</strong></p> 
-      </div>
-      <div className="categoria-activos">
+      
         <p className="categoria"><img src={herramientas} width="20px" alt="herramientas" />Herramientas:<strong>95 (8%)</strong></p> 
-      </div>
-      <div className="categoria-activos">
+      
         <p className="categoria"><img src={conexion} width="20px" alt="otros" />Otros:<strong>100 (8%)</strong></p> 
-      </div>
-    </article>
+    </div>
     <button className="boton-contenido gestionar">Gestionar categorias</button>
   </div>
   )

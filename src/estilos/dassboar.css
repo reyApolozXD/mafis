@@ -9,7 +9,7 @@
     background-color: rgb(248, 246, 246);
     color: #333;
     width: 100%;
-    height: 100vh;
+    height: 107vh;
 
 }
 
@@ -22,7 +22,7 @@ estilos del encabezado
     background-color: rgb(248, 246, 246);
     color: #080808;
     width: 100%;
-    height: 100vh   ;
+    height: 107vh;
     gap: 2rem;
     flex-direction: row-reverse;
     flex-direction: column;
@@ -169,14 +169,14 @@ estilos del panel de control
     display: flex;
     align-items: center;
     width: 100%;;
-    padding-left: 0.5rem ;
+    padding-left: 0.3rem ;
     height: 50px;
     background-color: transparent;
     border: none;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
     color: #333;
-    gap: 8px;
+    gap: 5px;
     transition: all 0.3s ease;
 }
 .boton-regreso{
@@ -284,7 +284,6 @@ Fin estilos del panel de control
     width: 90%;
     height: 40px;
     border-radius: 6px;
-    border: none;
     background-color: #2e2e2e;
     color: white;
     font-family: poppins;
@@ -317,8 +316,7 @@ Fin estilos del panel de control
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 45%;
-    gap: 1rem;
+    height: 250px;
     font-size: 15px;
     font-weight: 400;
     text-align: left;
@@ -326,7 +324,7 @@ Fin estilos del panel de control
 }
 
 .gestionar {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .Ordenes-trabajo{
@@ -343,7 +341,7 @@ Fin estilos del panel de control
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 315px;
+    height: 280px;
     gap: 0.5rem;
     font-weight: 400;
     text-align: left;
@@ -352,10 +350,9 @@ Fin estilos del panel de control
 }
 .informacion{
     box-shadow: 0 2px 2px rgba(221, 220, 220, 0.986);
-    padding-bottom: 0.6rem ;
     padding-left: 0.6rem;
-    padding-top: 0.2rem;
     transition:  all 0.3s ease;
+    height: 60px;
 }
 
 .informacion:hover{
@@ -371,20 +368,17 @@ Fin estilos del panel de control
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 300px;
+    height: 270px;
     gap: 0.5rem;
     font-weight: 400;
-    text-align: left;
     font-size: 12px;
 }
 .actividad{
+    height: 45px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     box-shadow: 0 2px 2px rgba(221, 220, 220, 0.986);
-    padding-bottom: 0.6rem ;
-    padding-left: 0.6rem;
-    padding-top: 0.2rem;
     transition:  all 0.3s ease;
 }
 .actividad:hover{
@@ -400,16 +394,21 @@ Fin estilos del panel de control
 .alertas {
     display: flex;
     gap: 0.5rem;
-    padding-top: 20px;
-    padding-right: 30px;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
 
+}
+.alertas:hover{
+    background-color: rgba(253, 0, 0, 0.384);
+    color: black;
+    cursor: pointer;
 }
 
 .alertas-critica{
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 45%;
     gap: 1rem;
     font-size: 15px;
     font-weight: 400;

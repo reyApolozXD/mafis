@@ -10,33 +10,33 @@ export default function CardActividadReciente() {
     <article className="actividad-reciente">
       <div className="actividad">
         <img src={conexion} width="20px" height="20px" alt="conexion" />
-        <p>
+        <div>
           <strong>Orden #OT-2024-005 completada para 'Generador G-1'</strong><br />
-          Hace 10 min por Juan Pérez</p>
+          Hace 10 min por Juan Pérez</div>
       </div>
       <div className="actividad">
         <img src={coche} width="20px" height="20px" alt="coche" />
-        <p>
+        <div>
           <strong>Nuevo activo 'motor V-12' añadido</strong><br />
-          Ayer 14:30 por María López</p>
+          Ayer 14:30 por María López</div>
       </div>
       <div className="actividad">
         <img src={conexion} width="20px" height="20px" alt="conexion" />
-        <p>
+        <div>
           <strong>Alerta crítica: 'Compresor B-2' con nivel de aceite bajo</strong><br />
-          Hace 3 horas por Sistema</p>
+          Hace 3 horas por Sistema</div>
       </div>
       <div className="actividad">
         <img src={infraestructura} width="20px" height="20px" alt="infraestructura" />
-        <p>
+        <div>
           <strong>Mantenimiento preventivo programado para 'Línea de Producción 2'</strong><br />
-          Hoy 09:00 por Pedro García</p>
+          Hoy 09:00 por Pedro García</div>
       </div>
       <div className="actividad">
         <img src={infraestructura} width="20px" height="20px" alt="infraestructura" />
-        <p>
+        <div>
           <strong>Ubicación 'Almacén Principal' actualizada</strong><br />
-          Hace 1 día por Ana Ruiz</p>
+          Hace 1 día por Ana Ruiz</div>
       </div>
     </article>
     <button className="boton-contenido">Ver Historial Completo</button>
