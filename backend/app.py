@@ -5,7 +5,7 @@ import pymysql
 
 app = Flask (__name__)
 CORS(app) # permite que react llame a sin bloqueos
-"""conexon al abase de datos"""
+"""conexion al abase de datos"""
 def get_conection():
     return pymysql.connect(
         host='localhost',  # host es el servidor
@@ -29,7 +29,7 @@ def get_activos():
     return jsonify(rows)
 """____________________"""
 
-"""crear acvitos con el metodo post"""
+"""crear activos con el metodo post"""
 @app.route('/activos', methods=['POST']) 
 def crear_activos(): # define la funcion de python que se ejecuta cuando se accede a la ruta
     data = request.get_json() # recupera los datos es decir el nuevo activo que el cliente escribio en el cuerpo de la solicitu
@@ -43,4 +43,5 @@ def crear_activos(): # define la funcion de python que se ejecuta cuando se acce
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
