@@ -6,7 +6,7 @@ export default function Activos(){
     const [datos, setDatos] = useState([]);
     const navigate = useNavigate();
     const [mostrarForm, setMostrarForm] = useState(false);
-    const [form, setFrom] = useState({
+    const [form, setForm] = useState({
         nombreActivo: "",
         tipo: "",
         ubicacion: "",
@@ -24,11 +24,14 @@ export default function Activos(){
             return alert("completa los campos");
             const res = await fetch("http://localhost:5000/activos",{
                 method: "POST",
-                headers: {"content-type": "application/json"},
-                bodt: JSON.stringify(form),
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(form),
             });
             if(!res.ok ) return alert("error al crear el activo");
-            const nueva = await fetch("http://localhost:5000/activos").then((r) => r.json)
+            const nueva = await fetch("http://localhost:5000/activos").then((r) => r.json())
+            setDatos(nueva);
+            setForm({nombreActivo: "", tipo: "", ubicacion: "", estado: "activo"});
+            setMostrarForm(false)
             
         }
     // fetch es la funcion nativa del navegador para hacerse peticiones http y traer o recibir datos de un servidor: que haces:
@@ -53,16 +56,16 @@ export default function Activos(){
             <div className="card mb-3">
                 <div className="card-body"> 
                     <h5>crear activo</h5>
-                    <input className="form-control mb-2" placeholder="nombre" value={form.nombreActivo} onChange={(e) => setFrom({...form, nombreActivo: e.target.value})}/>
-                    <input className="form-control mb-2" placeholder="tipo" value={form.tipo} onChange={(e) => setFrom({...form, tipo: e.target.value})}/>
-                    <input className="form-control mb-2" placeholder="ubicacion" value={form.ubicacion} onChange={(e) => setFrom({...form, ubicacion: e.target.value})}/>
+                    <input className="form-control mb-2" placeholder="nombre" value={form.nombreActivo} onChange={(e) => setForm({...form, nombreActivo: e.target.value})}/>
+                    <input className="form-control mb-2" placeholder="tipo" value={form.tipo} onChange={(e) => setForm({...form, tipo: e.target.value})}/>
+                    <input className="form-control mb-2" placeholder="ubicacion" value={form.ubicacion} onChange={(e) => setForm({...form, ubicacion: e.target.value})}/>
                     <select className="from-select mb-2"
                     value={form.estado}
-                    onChange={(e) => setFrom({...form, estado: e.target.value})}>
+                    onChange={(e) => setForm({...form, estado: e.target.value})}>
                         <option >Activo</option>
                         <option >Inactivo</option>
                     </select>
-                    <button className="editar">Guardar</button>
+                    <button className="editar" onClick={crear}>Guardar</button>
 
                     <button className="eliminar" onClick={() => setMostrarForm(false)}>Cancelar</button>
                 </div>
